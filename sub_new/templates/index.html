@@ -1,0 +1,25 @@
+<h2>Add Sub Agent</h2>
+<form method="POST" action="/add">
+    <input type="text" name="name" placeholder="Agent name" required>
+    <button type="submit">Add</button>
+</form>
+
+<h2>Sub Agents List</h2>
+<table border="1">
+<tr>
+    <th>SL No</th>
+    <th>Name</th>
+    <th>Action</th>
+</tr>
+
+{% for agent in agents %}
+<tr>
+    <td>{{ agent[0] }}</td>
+    <td>{{ agent[1] }}</td>
+    <td>
+        <a href="/edit/{{ agent[0] }}">Edit</a>
+        <a href="/delete/{{ agent[0] }}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
