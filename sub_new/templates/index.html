@@ -1,11 +1,91 @@
-<h2>Add Sub Agent</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sub Agents Terminal</title>
+
+    <style>
+        body {
+            background: black;
+            color: #00ff00;
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        h2 {
+            text-shadow: 0 0 8px #00ff00;
+        }
+
+        input, button {
+            background: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 8px;
+            margin: 5px 0;
+            font-family: monospace;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 8px #00ff00;
+        }
+
+        button:hover {
+            background: #002200;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #00ff00;
+            padding: 10px;
+        }
+
+        tr:hover {
+            background: #001100;
+        }
+
+        a {
+            color: #cfd3cf;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        a:hover {
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        /* blinking cursor */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background: #3a3f6c;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Sub Agent Console<span class="cursor"></span></h2>
+
 <form method="POST" action="/add">
-    <input type="text" name="name" placeholder="Agent name" required>
-    <button type="submit">Add</button>
+    <input type="text" name="name" placeholder="Enter agent name..." required>
+    <button type="submit">Add Agent</button>
 </form>
 
-<h2>Sub Agents List</h2>
-<table border="1">
+<h2>Agent Database</h2>
+
+<table>
 <tr>
     <th>SL No</th>
     <th>Name</th>
@@ -23,3 +103,6 @@
 </tr>
 {% endfor %}
 </table>
+
+</body>
+</html>

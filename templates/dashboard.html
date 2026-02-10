@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Al Ameer Agency</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dashboard-body">
+
+<!-- Top Bar -->
+<div class="topbar">
+    <img src="{{ url_for('static', filename='images/alameer.png') }}" class="logo-small">
+    <h2>Recruitment Dashboard</h2>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="#">Dashboard</a>
+    <a href="#">Add Agent</a>
+    <a href="#">Agent List</a>
+    <a href="#">Candidates</a>
+    <a href="#">Visa Processing</a>
+    <a href="#">Reports</a>
+    <a href="/">Logout</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Agents</h3>
+            <p>120</p>
+        </div>
+
+        <div class="card">
+            <h3>Active Candidates</h3>
+            <p>340</p>
+        </div>
+
+        <div class="card">
+            <h3>Processing Visas</h3>
+            <p>56</p>
+        </div>
+
+        <div class="card">
+            <h3>Outstanding Payments</h3>
+            <p>$12,000</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
